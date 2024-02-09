@@ -80,6 +80,32 @@ introspection_query = '''
     }
 '''
 
+introspection_query2 = '''
+        query IntrospectionQuery {
+            __schema {
+                types {
+                    name
+                    kind
+                    fields {
+                        name
+                        type {
+                            name
+                            kind
+                            ofType {
+                                name
+                                kind
+                                ofType {
+                                    name
+                                    kind
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    '''
+
 # Define the GraphQL endpoint URL
 endpoint_url = 'https://your-graphql-endpoint.com/graphql'
 
