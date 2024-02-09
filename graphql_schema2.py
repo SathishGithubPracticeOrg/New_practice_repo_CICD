@@ -17,14 +17,6 @@ introspection_query = '''
             types {
                 ...FullType
             }
-            directives {
-                name
-                description
-                locations
-                args {
-                    ...InputValue
-                }
-            }
         }
     }
 
